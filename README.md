@@ -6,7 +6,7 @@ https://oncletom.io/2016/travis-ssh-deploy/
 
 1. Le cloner sur ta machine localement, là où tu en as besoin, par exemple, dans le dossier `htdocs`.
 
-1. Créer un compte sur travis-ci.com (en utilisant tes identifiants de GitHub) et associer le repository tout juste créé sur GitHub au compte Travis.
+1. Créer un compte sur https://travis-ci.com (en utilisant tes identifiants de GitHub) et associer le repository tout juste créé sur GitHub au compte Travis.
 
 1. Installer Travis CLI localement.
     ```sh
