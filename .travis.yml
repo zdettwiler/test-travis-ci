@@ -1,5 +1,5 @@
 language: php
 
-before_script:
+script:
   - echo 'testing'
   - ls -la
