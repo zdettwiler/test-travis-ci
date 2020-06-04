@@ -3,3 +3,4 @@ language: php
 script:
   - echo 'testing'
   - ls -la
+  - cat ./doc.txt
