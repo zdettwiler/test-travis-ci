@@ -1,8 +1,9 @@
 language: php
 
 script:
-  - echo "composer install"
+  - echo "composer install here"
   - echo $TRAVIS_BUILD_DIR
+  - ls -la
 
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_db2095f63ba3_key -iv $encrypted_db2095f63ba3_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
@@ -15,6 +16,6 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-    - rsync -r --delete-after --quiet --exclude 'deploy_rsa.enc' $TRAVIS_BUILD_DIR $SSH_USER@$SSH_HOST:~/test/
+    - rsync -avz --delete-after --exclude 'deploy_rsa.enc' --exclude '.git' $TRAVIS_BUILD_DIR/ $SSH_USER@$SSH_HOST:~/test/
   on:
     branch: master
