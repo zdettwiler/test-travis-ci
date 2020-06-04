@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/zdettwiler/test-travis-ci.svg?branch=master)](https://travis-ci.com/zdettwiler/test-travis-ci)
+
 # Deploiement Continu avec Travis CI
 Sur Linux/Mac. Sur Windows, je recommande activer WSL (une machine virtuelle pour Ubuntu pré-existente sur Windows 10).
 
