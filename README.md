@@ -49,6 +49,13 @@ Sur Linux/Mac. Sur Windows, je recommande activer WSL (une machine virtuelle pou
 
 1. À ce stade, on va juste installer les dépendances sur Travis et envoyer tout le dossier `vendor` sur le serveur. À l'avenir, à mesure que le projet s'agrandi, il sera peut-être plus judicieux d'installer les dépendances sur le serveur.
 
+1. Il faut aussi ajouter les variables liées à l'environment sur Travis CI dans les paramètres du project. Les suivantes sont nécéssaires:
+    ```
+    SSH_USER
+    SSH_HOST
+    ```
+    tel que `$SSH_USER@$SSH_HOST`.
+
 
 ---
 ### Ressources Utiles
