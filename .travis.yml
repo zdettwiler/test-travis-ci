@@ -1,13 +1,7 @@
 language: php
-script:
-  - echo 'testing'
-  - ls -la
-  - cat ./doc.txt
 
 script:
   - echo "composer install"
-  # - composer self-update
-  # - composer install --no-interaction
 
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_db2095f63ba3_key -iv $encrypted_db2095f63ba3_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
@@ -20,12 +14,5 @@ deploy:
   skip_cleanup: true
   script:
     - rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR $SSH_SERVER:~/test/
-    # - php artisan down
-    # - php artisan migrate
-    # - php artisan cache:clear
-    # - php artisan auth:clear-resets
-    # - php artisan route:cache
-    # - php artisan config:cache
-    # - php artisan up
   on:
     branch: master
