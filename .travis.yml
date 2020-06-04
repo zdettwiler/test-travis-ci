@@ -1,7 +1,7 @@
 language: php
 
 script:
-  - echo "composer install here"
+  - composer install
   - echo $TRAVIS_BUILD_DIR
   - ls -la
 
@@ -17,5 +17,13 @@ deploy:
   skip_cleanup: true
   script:
     - rsync -avz --delete-after --exclude 'deploy_rsa.enc' --exclude '.git' $TRAVIS_BUILD_DIR/ $SSH_USER@$SSH_HOST:~/test/
+    # - ssh $SSH_USER@$SSH_HOST/test \"
+    #     php artisan down &&
+    #     php artisan migrate &&
+    #     php artisan cache:clear &&
+    #     php artisan auth:clear-resets &&
+    #     php artisan route:cache &&
+    #     php artisan config
+    # \"
   on:
     branch: master
