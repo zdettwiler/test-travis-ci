@@ -12,7 +12,7 @@ Sur Linux/Mac. Sur Windows, je recommande activer WSL (une machine virtuelle pou
 
 1. Créer un compte sur [travis-ci.com](https://travis-ci.com) (en utilisant tes identifiants de GitHub) et associer le repository tout juste créé sur GitHub au compte Travis.
 
-1. Installer Travis CLI localement.
+1. Installer Travis CLI localement. Il faudra d'abord [installer Ruby](https://rubyinstaller.org).
     ```sh
     gem install travis
     ```
